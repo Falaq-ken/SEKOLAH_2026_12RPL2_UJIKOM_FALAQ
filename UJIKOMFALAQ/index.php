@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PENGADUAN MUTU</title>
 </head>
 <body>
-    <h1> IYAAHHHHHH !!!!! </h1>
+<div>
+    <h3>Selamat datang di website pengaduan mutu</h3>
+    <a href="cari-pengaduan.php">Cari Pengaduan</a>
+</div>
+
 </body>
 </html>
+
