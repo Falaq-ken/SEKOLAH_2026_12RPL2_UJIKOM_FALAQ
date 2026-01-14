@@ -7,7 +7,10 @@
 <body>
 <div>
     <h3>Selamat datang di website pengaduan mutu</h3>
-    <a href="cari-pengaduan.php">Cari Pengaduan</a>
+    <a href="form-pengaduan.php">buat pengaduan</a>
+    <a href="cari-pengaduan.php">cari Pengaduan</a>
+
+    
 </div>
 
 </body>
