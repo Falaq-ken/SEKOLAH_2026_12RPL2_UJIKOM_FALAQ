@@ -25,7 +25,7 @@
             background-color: white;
             padding: 25px;
             border: 1px solid;
-            border-radius: 5px;
+            border-radius: 15px;
         }
         
         .button{
@@ -33,7 +33,7 @@
             border: 1px solid;
             padding: 5px;
             background-color: rgb(105, 182, 255);
-            border-radius: 5px;
+            border-radius: 7px;
             font-family: monospace;
         }
             
@@ -52,8 +52,8 @@
     <input type="text"> <br>
 
 </form>
-    <br><button class="button">cari</button>
-    <a href="index.php"> <button class="button">Ga jadi</button></a>
+    <br>  <a href="index.php"> <button class="button">BATAL</button></a> 
+  <button class="button">CARI !</button>
 
 </div>
 
