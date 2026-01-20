@@ -25,7 +25,7 @@
             background-color: white;
             padding: 25px;
             border: 1px solid;
-            border-radius: 5px;
+            border-radius: 15px;
         }
         
         .button{
@@ -33,7 +33,7 @@
             border: 1px solid;
             padding: 5px;
             background-color: rgb(105, 182, 255);
-            border-radius: 5px;
+            border-radius: 7px;
             font-family: monospace;
 
         }
@@ -43,7 +43,7 @@
             border: 1px solid;
             padding: 5px;
             background-color: rgb(105, 182, 255);
-            border-radius: 5px;
+            border-radius: 7px;
             font-family: monospace;
         }
 
@@ -57,28 +57,38 @@
 
 
 <div class="box">
-<form action="">
+<form action="proses-pengaduan.php" method="POST">
    <b>HALAMAN PENGADUAN </b>  <br>
     <br>
     <label for="">Nis :</label><br>
-    <input type="text"> <br>
+    <input type="text" name="nis"> <br>
 
-    <label for="">Kategori :</label><br>
-    <input type="text"> <br>
+    <div>
+    <label for="">Kategori</label>
+    <br>
+    <select name="kategori" id="kategori">
+        <option value="" hidden selected>Pilih Kategori</option>
+        <option value="Fasilitas">Fasilitas</option>
+        <option value="Elektronik">Elektronik</option>
+        <option value="Barang">Barang</option>
+    </select>
+    </div>
     
     <label for="">lokasi :</label><br>
-    <input type="text">
+    <input type="text" name="lokasi">
+
+    <div>
+    <label for="">Keterangan :</label> <br>
+    <textarea name="keterangan"></textarea>
+    </div>
+
+  <br>  <a href="index.php"> <button class="button1">BATAL</button></a>
+   <button class="button">KIRIM !</button> 
+</div>
+
 
 </form>
 
-    <div>
-    <label for="">Keterangan</label> <br>
-    <textarea></textarea>
-    </div>
-
-  <br>  <button class="button">Kirim</button>
-    <a href="index.php"> <button class="button1">Ga jadi</button></a>
-</div>
-
+    
 </body>
 </html>
