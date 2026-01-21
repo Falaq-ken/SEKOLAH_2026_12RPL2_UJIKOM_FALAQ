@@ -16,16 +16,19 @@
             margin: 0;
             height: 90vh;
             background-color: rgb(105, 182, 255);
+            text-align: center;
+            
         }
 
-
-             
 
         .box{
             background-color: white;
             padding: 25px;
             border: 1px solid;
             border-radius: 15px;
+            width: 200px;
+            
+            
         }
         
         .button{
@@ -35,19 +38,82 @@
             background-color: rgb(105, 182, 255);
             border-radius: 7px;
             font-family: monospace;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 35px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
 
         }
+    
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
             
-         .button1{
-            border: none;
-            border: 1px solid;
-            padding: 5px;
-            background-color: rgb(105, 182, 255);
-            border-radius: 7px;
-            font-family: monospace;
+
+        select{
+            color: #999; /* abu-abu awal */
         }
 
-            
+        select:focus {
+            color: #000;
+        }
+
+        select option {
+            color: #000; /* opsi normal hitam */
+        }
+
+        input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 35px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        textarea{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 80px;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
+            resize: none;
+        }
+        .input {
+            width: 100%;
+            height: 35px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
+            appearance: none;          /* hapus style default */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+}
+
+
     </style>
 </head>
 <body>
@@ -58,31 +124,21 @@
 
 <div class="box">
 <form action="proses-pengaduan.php" method="POST">
-   <b>HALAMAN PENGADUAN </b>  <br>
-    <br>
-    <label for="">Nis :</label><br>
-    <input type="text" name="nis"> <br>
-
+   <b> <h2>HALAMAN PENGADUAN </h2></b>
+    <input placeholder="Nis" type="text" name="nis"> 
     <div>
-    <label for="">Kategori</label>
-    <br>
-    <select name="kategori" id="kategori">
-        <option value="" hidden selected>Pilih Kategori</option>
-        <option value="Fasilitas">Fasilitas</option>
-        <option value="Elektronik">Elektronik</option>
-        <option value="Barang">Barang</option>
-    </select>
+    <select name="kategori" id="kategori" class="input">
+    <option value="" disabled selected hidden>Pilih Kategori</option>
+    <option value="Fasilitas">Fasilitas</option>
+    <option value="Elektronik">Elektronik</option>
+    <option value="Barang">Barang</option>
+</select>
     </div>
-    
-    <label for="">lokasi :</label><br>
-    <input type="text" name="lokasi">
-
+    <input placeholder="Lokasi" type="text" name="lokasi">
     <div>
-    <label for="">Keterangan :</label> <br>
-    <textarea name="keterangan"></textarea>
+    <textarea placeholder="Keterangan" name="keterangan"></textarea>
     </div>
 
-  <br>  <a href="index.php"> <button class="button1">BATAL</button></a>
    <button class="button">KIRIM !</button> 
 </div>
 
