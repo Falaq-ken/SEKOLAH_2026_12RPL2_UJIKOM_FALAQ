@@ -16,10 +16,24 @@
             margin: 0;
             height: 90vh;
             background-color: rgb(105, 182, 255);
+            text-align: center;
+
         }
 
+        input{
+            font-family: monospace;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 35px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
 
-             
+  
 
         .box{
             background-color: white;
@@ -35,10 +49,17 @@
             background-color: rgb(105, 182, 255);
             border-radius: 7px;
             font-family: monospace;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 35px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 14px;
+            box-sizing: border-box;
         }
-            
-
-            
+        
     </style>
 </head>
 <body>
@@ -46,15 +67,16 @@
 
 <div class="box">
 <form action="">
-   <b>CARI PENGADUAN </b>  <br>
-    <br>
-    <label for=""></label><br>
-    <input type="text"> <br>
+   <b> <h1>CARI PENGADUAN </h1></b>  
+    <label for=""></label>
+    <input 
+    placeholder="ketik apa aja sok" type="text"> 
 
 </form>
-    <br>  <a href="index.php"> <button class="button">BATAL</button></a> 
+<div>
+<a href="index.php"> <button class="button">BATAL</button></a> 
   <button class="button">CARI !</button>
-
+</div>
 </div>
 
 </body>
