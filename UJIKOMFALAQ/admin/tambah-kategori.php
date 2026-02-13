@@ -1,0 +1,126 @@
+<?php
+// session digunakan untuk menyimpan status login dan role user
+session_start();
+
+// menghubungkan aplikasi dengan database MySQL
+$koneksi = mysqli_connect("localhost","root","","ujikom_12rpl2_falaq");
+
+
+// memastikan halaman ini hanya bisa diakses oleh admin
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    // jika bukan admin, diarahkan ke halaman login
+    header("Location: ../login.php");
+    exit;
+}
+
+// kode dijalankan saat tombol tambah ditekan
+if (isset($_POST['simpan'])) {
+
+    // mengambil data dari form input
+    $id_kategori  = $_POST['id_kategori'];
+    $ket_kategori = $_POST['ket_kategori'];
+
+    // menyimpan data kategori ke database
+    mysqli_query($koneksi, "
+        INSERT INTO kategori (id_kategori, ket_kategori)
+        VALUES ('$id_kategori', '$ket_kategori')
+    ");
+
+    // setelah berhasil, kembali ke halaman kategori
+    header("Location: kategori.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Tambah Kategori</title>
+
+    <style>
+        body{
+            font-family: 'Baloo 2';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(255, 55, 82);
+        }
+
+        .box{
+            background-color: white;
+            padding: 25px;
+            width: 250px;
+            border-radius: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        input{
+            width: 90%;
+            height: 35px;
+            margin: 8px 0;
+            padding: 0 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-family: 'Baloo 2';
+        }
+
+        button{
+            width: 100%;
+            height: 35px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: rgb(255, 55, 82);
+            font-family: 'Baloo 2';
+            transition: all 0.2s ease;
+        }
+
+        button:hover{
+            background-color:  rgb(204, 30, 53);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: medium;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* supaya gada garis bawah di link */
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<!-- import font dari google-->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<body>
+
+<!-- form tambah kategori -->
+<div class="box">
+    <h2>TAMBAH KATEGORI</h2>
+
+    <form method="post">
+        <!-- input ID kategori -->
+        <input type="number" name="id_kategori" placeholder="ID Kategori" required>
+
+        <!-- input nama kategori -->
+        <input type="text" name="ket_kategori" placeholder="Nama Kategori" required>
+
+        <!-- tombol simpan -->
+        <button type="submit" name="simpan"><b>TAMBAH !</b></button>
+
+        <!-- tombol kembali -->
+        <a href="admin.php">
+            <button type="button"><b>KEMBALI</b></button>
+        </a>
+    </form>
+</div>
+
+</body>
+</html>
