@@ -20,7 +20,7 @@ $query = mysqli_query($koneksi, "
     INSERT INTO input_aspirasi 
     (id_pelapor, nis, id_kategori, tanggal, lokasi, ket, status, feedback)
     VALUES 
-    (NULL, '$nis', '$kategori', CURRENT_TIMESTAMP, '$lokasi', '$keterangan', 'menunggu', NULL)
+    (NULL, '$nis', '$kategori', $tanggal, '$lokasi', '$keterangan', 'menunggu', NULL)
 "); 
 // // menjalankan query INSERT untuk menyimpan data ke tabel input_aspirasi
 // // id_pelapor = NULL (auto increment / tidak diisi manual)
