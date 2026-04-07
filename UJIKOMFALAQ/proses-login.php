@@ -18,7 +18,7 @@ $query = mysqli_query($koneksi, "
 $data = mysqli_fetch_assoc($query); 
 // // ambil hasil query jadi array (1 baris data)
 // // kalau data ketemu → berisi data user
-// // kalau tidak → hasilnya NULL
+// // kalau tidak → tidak ada hasilnya/error
 
 if ($data) { 
 // // cek apakah data ditemukan
